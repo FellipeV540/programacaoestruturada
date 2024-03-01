@@ -1,6 +1,6 @@
 # funções
 
-def traco(sep, tamanho)
+def traco(sep, tamanho):
     print(sep * tamanho)
 
 # declarando/definindo funçoes
@@ -17,4 +17,14 @@ cabecalho("RELATORIO DE CONTRATAÇÕES", 25, "=") #define parametro dentro do pa
 print(cabecalho)
 print(cabecalho("ola", 25))
 
+print("-" * 40)
 
+x = 777
+
+def func2(x):
+    x = 999
+    print(x)
+    return x
+
+x = func2(100)
+print(x)
