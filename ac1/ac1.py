@@ -28,10 +28,14 @@ print("a segunda raiz é", raizes[1])
 # exercício 2
 
 # pede o ano para o usuário
-ano = int(input("Informe o Ano: "))
+def bissexto():
+    ano = int(input("Informe o Ano: "))
 
-# verifica se o ano é bissexto
-bissexto = (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0
+    # verifica se o ano é bissexto
+    if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
+        return "É bissexto"
+    else:
+        return "Não é bissexto"
 
 # print se o ano é bissexto
 print(bissexto)
