@@ -1,4 +1,4 @@
-# exercício 2
+# exercício 1
 
 # calcula delta
 def cal_delta(a, b, c):
