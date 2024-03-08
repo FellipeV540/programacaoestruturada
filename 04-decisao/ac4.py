@@ -4,7 +4,7 @@ def ler_nome():
 
 def ler_notas():
     """le as notas do usuario"""
-    ap1 = float(input("Nota Ap1:"))
+    ap1 = float(input("Nota Ap1: "))
     ap2 = float(input("Nota Ap2: "))
     asub = float(input("Nota Asub: "))
     ac = float(input("Nota Ac: "))
@@ -14,9 +14,11 @@ def ler_notas():
 
 def analisar_subst(ap1, ap2, asub):
     """analiasr se a substitutiva deveria substituir alguma nota"""
-    if asub > ap1 and ap1 > ap2:
+    if asub > ap1 and ap1 < ap2:
+        ap1 = asub
+    elif asub > ap2 and ap2 < ap1:
         ap2 = asub
-    elif asub > ap2 and ap2 > ap1:
+    elif asub > ap1 and ap1 == ap2:
         ap1 = asub
     return ap1, ap2
 
@@ -45,8 +47,8 @@ def main():
             media = calcular_media(ap1, ap2, asub, ac)
             print("Média final:", media)
             if aluno_foi_aprovado(media):
-                print("Aluno foi aprovado.")
+                print("Aluno foi aprovado. Sua nota foi", media)
             else:
-                print("Aluno foi reprovado.")
+                print("Aluno foi reprovado. Sua nota foi", media)
 
 main()
