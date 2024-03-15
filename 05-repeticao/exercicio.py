@@ -18,3 +18,10 @@ def fatorial(num):
     print(x, "! = ", result, sep="")
 
 fatorial(5)
+
+def fatorial2(num):
+    if num == 1:
+        return 1
+    return num * fatorial2(num - 1)
+
+print(fatorial2(5))
